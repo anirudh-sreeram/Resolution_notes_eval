@@ -1,0 +1,122 @@
+{
+    "P1": {
+        "Consecutive repeated substring score": 0.9827586206896551,
+        "Summac precision": 0.199675566095693,
+        "Rouge score": {
+            "rouge1-precision": 0.21884464196035486,
+            "rouge2-precision": 0.10065568463412544,
+            "rouge3-precision": 0.060198027766777365,
+            "rougeL-precision": 0.17373672542446256,
+            "rougeLsum-precision": 0.17658450956222735,
+            "rouge1-recall": 0.4609091434728315,
+            "rouge2-recall": 0.18301639074309917,
+            "rouge3-recall": 0.10400091508009865,
+            "rougeL-recall": 0.37138112687250274,
+            "rougeLsum-recall": 0.3773380506761946,
+            "rouge1-f1": 0.27463057813566105,
+            "rouge2-f1": 0.1219336278243792,
+            "rouge3-f1": 0.07167538627269131,
+            "rougeL-f1": 0.21846649468166757,
+            "rougeLsum-f1": 0.22203110516157934
+        },
+        "Prompt repeat score": 1.0,
+        "Entity score": 0.9396551724137931,
+        "Entity hallucination score": 0.9913793103448276
+    },
+    "P3": {
+        "Consecutive repeated substring score": 0.9568965517241379,
+        "Summac precision": 0.2076610629896591,
+        "Rouge score": {
+            "rouge1-precision": 0.1506764467761134,
+            "rouge2-precision": 0.06028565984222328,
+            "rouge3-precision": 0.0310092282828766,
+            "rougeL-precision": 0.1180937109557227,
+            "rougeLsum-precision": 0.12350443072881337,
+            "rouge1-recall": 0.529175160098889,
+            "rouge2-recall": 0.19532386629174253,
+            "rouge3-recall": 0.09533456641038787,
+            "rougeL-recall": 0.42026920597433876,
+            "rougeLsum-recall": 0.45114655584317254,
+            "rouge1-f1": 0.2097225091349724,
+            "rouge2-f1": 0.0853264706107382,
+            "rouge3-f1": 0.04410745303369906,
+            "rougeL-f1": 0.165152737370423,
+            "rougeLsum-f1": 0.17355676504508258
+        },
+        "Prompt repeat score": 0.9741379310344828,
+        "Entity score": 0.9224137931034483,
+        "Entity hallucination score": 1.0
+    },
+    "P9": {
+        "Consecutive repeated substring score": 0.9655172413793104,
+        "Summac precision": 0.3062069299617592,
+        "Rouge score": {
+            "rouge1-precision": 0.1587498662585013,
+            "rouge2-precision": 0.0653766901565203,
+            "rouge3-precision": 0.03670208604055212,
+            "rougeL-precision": 0.12271592359782366,
+            "rougeLsum-precision": 0.12662601794897899,
+            "rouge1-recall": 0.558149697640338,
+            "rouge2-recall": 0.21317552942221177,
+            "rouge3-recall": 0.1165780828906013,
+            "rougeL-recall": 0.4536298707944041,
+            "rougeLsum-recall": 0.46563396186013034,
+            "rouge1-f1": 0.2261186141627816,
+            "rouge2-f1": 0.09210652905979907,
+            "rouge3-f1": 0.051996590979842876,
+            "rougeL-f1": 0.1762541114124959,
+            "rougeLsum-f1": 0.18176661438348574
+        },
+        "Prompt repeat score": 1.0,
+        "Entity score": 0.9310344827586207,
+        "Entity hallucination score": 0.9827586206896551
+    },
+    "P20": {
+        "Consecutive repeated substring score": 1.0,
+        "Summac precision": 0.25441764861832117,
+        "Rouge score": {
+            "rouge1-precision": 0.15420529469728547,
+            "rouge2-precision": 0.04432451365295676,
+            "rouge3-precision": 0.020163585645465144,
+            "rougeL-precision": 0.11843255754242586,
+            "rougeLsum-precision": 0.12619218177438574,
+            "rouge1-recall": 0.4253638658726083,
+            "rouge2-recall": 0.16056073223339007,
+            "rouge3-recall": 0.07513935906962137,
+            "rougeL-recall": 0.35174496825527857,
+            "rougeLsum-recall": 0.37271047824479026,
+            "rouge1-f1": 0.19373084297903181,
+            "rouge2-f1": 0.05934996781402962,
+            "rouge3-f1": 0.027158068198079213,
+            "rougeL-f1": 0.1511991431863539,
+            "rougeLsum-f1": 0.1609782847312839
+        },
+        "Prompt repeat score": 1.0,
+        "Entity score": 0.8879310344827587,
+        "Entity hallucination score": 1.0
+    },
+    "P22": {
+        "Consecutive repeated substring score": 0.9913793103448276,
+        "Summac precision": 0.2779234122286708,
+        "Rouge score": {
+            "rouge1-precision": 0.18691003988807042,
+            "rouge2-precision": 0.060743703681264076,
+            "rouge3-precision": 0.035563615060019156,
+            "rougeL-precision": 0.14681585252762097,
+            "rougeLsum-precision": 0.15285605419124268,
+            "rouge1-recall": 0.4204324326032369,
+            "rouge2-recall": 0.13171129406537954,
+            "rouge3-recall": 0.07040473341944889,
+            "rougeL-recall": 0.33384277257803646,
+            "rougeLsum-recall": 0.3478381813444994,
+            "rouge1-f1": 0.21856431517601194,
+            "rouge2-f1": 0.07330145474933182,
+            "rouge3-f1": 0.043202538398269395,
+            "rougeL-f1": 0.1712120891656257,
+            "rougeLsum-f1": 0.1788282962498766
+        },
+        "Prompt repeat score": 1.0,
+        "Entity score": 0.9181034482758621,
+        "Entity hallucination score": 0.9827586206896551
+    }
+}

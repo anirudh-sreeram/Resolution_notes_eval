@@ -1,0 +1,98 @@
+{
+    "P1": {
+        "Consecutive repeated substring score": 1.0,
+        "Summac precision": 0.2221653420741804,
+        "Rouge score": {
+            "rouge1-precision": 0.20545221250232965,
+            "rouge2-precision": 0.08202951122821468,
+            "rouge3-precision": 0.0425142423063775,
+            "rougeL-precision": 0.16261455784964518,
+            "rougeLsum-precision": 0.16685675333703975,
+            "rouge1-recall": 0.4439667955413503,
+            "rouge2-recall": 0.1569704140225509,
+            "rouge3-recall": 0.0815473911641949,
+            "rougeL-recall": 0.3512792014511389,
+            "rougeLsum-recall": 0.3565149322666096,
+            "rouge1-f1": 0.25615414668703146,
+            "rouge2-f1": 0.1001500865653976,
+            "rouge3-f1": 0.052065126044259,
+            "rougeL-f1": 0.2034027709329894,
+            "rougeLsum-f1": 0.20777644250865848
+        },
+        "Prompt repeat score": 1.0,
+        "Entity score": 0.9224137931034483,
+        "Entity hallucination score": 1.0
+    },
+    "P3": {
+        "Consecutive repeated substring score": 0.9913793103448276,
+        "Summac precision": 0.28609673653475265,
+        "Rouge score": {
+            "rouge1-precision": 0.17248368476489861,
+            "rouge2-precision": 0.06244142309253968,
+            "rouge3-precision": 0.03330191238454889,
+            "rougeL-precision": 0.13167938552346842,
+            "rougeLsum-precision": 0.13951228407589933,
+            "rouge1-recall": 0.49101481763279375,
+            "rouge2-recall": 0.16834447819518203,
+            "rouge3-recall": 0.08745769624725909,
+            "rougeL-recall": 0.39060488760817175,
+            "rougeLsum-recall": 0.41834153021247467,
+            "rouge1-f1": 0.22448334063537884,
+            "rouge2-f1": 0.08239273858603165,
+            "rouge3-f1": 0.044265640627701726,
+            "rougeL-f1": 0.17264767620651694,
+            "rougeLsum-f1": 0.1830410337206947
+        },
+        "Prompt repeat score": 0.9655172413793104,
+        "Entity score": 0.9181034482758621,
+        "Entity hallucination score": 0.9741379310344828
+    },
+    "P9": {
+        "Consecutive repeated substring score": 0.9913793103448276,
+        "Summac precision": 0.26226160222590394,
+        "Rouge score": {
+            "rouge1-precision": 0.17987385577430415,
+            "rouge2-precision": 0.07594554641728263,
+            "rouge3-precision": 0.0423720486606926,
+            "rougeL-precision": 0.13771696201398512,
+            "rougeLsum-precision": 0.14132496241911416,
+            "rouge1-recall": 0.5378453153792415,
+            "rouge2-recall": 0.18966330038056167,
+            "rouge3-recall": 0.09642761050446402,
+            "rougeL-recall": 0.4200630755903018,
+            "rougeLsum-recall": 0.43377993217888694,
+            "rouge1-f1": 0.2453460621257449,
+            "rouge2-f1": 0.09976502395392328,
+            "rouge3-f1": 0.054601059563483136,
+            "rougeL-f1": 0.18848686104169649,
+            "rougeLsum-f1": 0.1933815324096425
+        },
+        "Prompt repeat score": 1.0,
+        "Entity score": 0.9310344827586207,
+        "Entity hallucination score": 1.0
+    },
+    "P16": {
+        "Consecutive repeated substring score": 0.9913793103448276,
+        "Summac precision": 0.15013820382261078,
+        "Rouge score": {
+            "rouge1-precision": 0.19524196475396335,
+            "rouge2-precision": 0.07375876735014056,
+            "rouge3-precision": 0.03795639973860594,
+            "rougeL-precision": 0.15125962343303279,
+            "rougeLsum-precision": 0.15465781599913292,
+            "rouge1-recall": 0.45881719639920665,
+            "rouge2-recall": 0.17895678508298862,
+            "rouge3-recall": 0.09114564682941242,
+            "rougeL-recall": 0.36164408524234615,
+            "rougeLsum-recall": 0.3675675597496189,
+            "rouge1-f1": 0.24659430598584114,
+            "rouge2-f1": 0.09297721158013324,
+            "rouge3-f1": 0.04710020567786472,
+            "rougeL-f1": 0.1918439956567975,
+            "rougeLsum-f1": 0.1957777481722233
+        },
+        "Prompt repeat score": 1.0,
+        "Entity score": 0.9224137931034483,
+        "Entity hallucination score": 1.0
+    }
+}

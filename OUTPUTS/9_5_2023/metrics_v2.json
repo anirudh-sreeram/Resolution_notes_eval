@@ -1,0 +1,32 @@
+{
+    "P6": {
+        "Consecutive repeated substring score": 0.9868421052631579,
+        "Summac precision": 0.5753927978070138,
+        "Entity score": 0.09346417846417847
+    },
+    "P7": {
+        "Consecutive repeated substring score": 0.9473684210526315,
+        "Summac precision": 0.5519809738624019,
+        "Entity score": 0.09433719433719435
+    },
+    "P8": {
+        "Consecutive repeated substring score": 0.9342105263157895,
+        "Summac precision": 0.5910514095048238,
+        "Entity score": 0.09711504129205994
+    },
+    "P9": {
+        "Consecutive repeated substring score": 0.9078947368421053,
+        "Summac precision": 0.648903142515715,
+        "Entity score": 0.09759718297189025
+    },
+    "P10": {
+        "Consecutive repeated substring score": 0.9210526315789473,
+        "Summac precision": 0.5569900523919564,
+        "Entity score": 0.0632424041590541
+    },
+    "P11": {
+        "Consecutive repeated substring score": 0.9078947368421053,
+        "Summac precision": 0.5721223070830493,
+        "Entity score": 0.12422655613487683
+    }
+}

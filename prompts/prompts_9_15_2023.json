@@ -1,0 +1,5 @@
+{
+    "P1": "The above case documents an interaction between an agent and a customer. Please provide notes on how the case was resolved or is proposed to be resolved that the agent can share with the customer.",
+    "P23": "Above is an interaction between agent and customer. Provide a conclusion to the above interaction in a paragraph.\nThe output should look like:\nResolution Notes: The issue was resolved by following the steps proposed...",
+    "P24": "Generate a single section containing the resolution notes for the above case. Includes details about how the case was resolved or the proposed solution if the case has not been resolved."
+}

@@ -1,0 +1,7 @@
+{
+    "P1": "The above case documents an interaction between an agent and a customer. Please provide notes on how the case was resolved or is proposed to be resolved that the agent can share with the customer.",
+    "P3": "In the context of a case, the resolution notes section is where the agent records information about the resolution of the case. This includes any steps taken to resolve the issue, any information provided to the customer, and any follow-up actions that need to be taken. The resolution notes section is a valuable resource for both the agent and the customer, as it provides a record of the case's resolution and any necessary next steps. Provide the resolution notes for the above case. In your response, use passive voice and refer to a case or incident as a ticket.",
+    "P9": "Provide a summary of the resolution by going through the above document. Explain the steps taken that solved the issue. If the issue is not resolved, then provide the proposed solution in the resolution notes. Do not use the words customer or agent in the resolution notes.",
+    "P20": "INSTRUCTION:\nIn a case, the resolution notes section records steps to resolve the issue, customer information, and follow-up actions. If there's no resolution, state \"No resolution documented.\" Convert active voice to passive.\nQUESTION:\nWhat are the resolution notes for the above case?",
+    "P22": "Provide me with the resolution notes for this case."
+}

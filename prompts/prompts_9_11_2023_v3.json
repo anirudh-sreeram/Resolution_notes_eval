@@ -1,0 +1,6 @@
+{
+    "P23": "The above case documents an interaction between an agent and a customer. Please provide notes on how the case was resolved or is proposed to be resolved that the agent can share with the customer. If there is no resolution, the output should only be: No resolution documented.",
+    "P24": "Please provide notes on how the case was resolved or is proposed to be resolved that the agent can share with the customer.",
+    "P25": "Please provide notes on how the case was resolved or is proposed to be resolved that the agent can share with the customer. If there is no resolution, the output should only be: No resolution documented.",
+    "P26": ""
+}

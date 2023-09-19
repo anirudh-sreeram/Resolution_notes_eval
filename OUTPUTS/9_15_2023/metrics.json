@@ -1,0 +1,77 @@
+{
+    "P1": {
+        "Prompt": "The above case documents an interaction between an agent and a customer. Please provide notes on how the case was resolved or is proposed to be resolved that the agent can share with the customer.",
+        "Consecutive repeated substring score": 0.9827586206896551,
+        "Summac precision": 0.2313079664877891,
+        "Rouge score": {
+            "rouge1-precision": 0.19948596499679724,
+            "rouge2-precision": 0.08904086447552646,
+            "rouge3-precision": 0.05400435674240059,
+            "rougeL-precision": 0.15976996413767502,
+            "rougeLsum-precision": 0.1630342315352629,
+            "rouge1-recall": 0.43992223792382884,
+            "rouge2-recall": 0.18340597970006373,
+            "rouge3-recall": 0.11078916534812353,
+            "rougeL-recall": 0.36203492279195626,
+            "rougeLsum-recall": 0.3673931982151334,
+            "rouge1-f1": 0.25319215230115744,
+            "rouge2-f1": 0.1124385213892417,
+            "rouge3-f1": 0.06798443045880898,
+            "rougeL-f1": 0.20414086278619975,
+            "rougeLsum-f1": 0.20807302768275301
+        },
+        "Prompt repeat score": 1.0,
+        "Entity score": 0.9224137931034483,
+        "Entity hallucination score": 0.9913793103448276
+    },
+    "P23": {
+        "prompt": "Above is an interaction between agent and customer. Provide a conclusion to the above interaction in a paragraph.\nThe output should look like:\nResolution Notes: The issue was resolved by following the steps proposed...",
+        "Consecutive repeated substring score": 0.9913793103448276,
+        "Summac precision": 0.25824866247994854,
+        "Rouge score": {
+            "rouge1-precision": 0.18870091732450084,
+            "rouge2-precision": 0.0756037321680151,
+            "rouge3-precision": 0.039741477556087514,
+            "rougeL-precision": 0.1404026124776039,
+            "rougeLsum-precision": 0.14341519994512786,
+            "rouge1-recall": 0.48979038534228714,
+            "rouge2-recall": 0.17513121202433835,
+            "rouge3-recall": 0.09080396305328278,
+            "rougeL-recall": 0.3783318684886929,
+            "rougeLsum-recall": 0.38885525468737175,
+            "rouge1-f1": 0.24986046327313222,
+            "rouge2-f1": 0.09836756358183134,
+            "rouge3-f1": 0.05145865413094344,
+            "rougeL-f1": 0.18733561595843962,
+            "rougeLsum-f1": 0.1910756908378755
+        },
+        "Prompt repeat score": 1.0,
+        "Entity score": 0.9137931034482759,
+        "Entity hallucination score": 0.9396551724137931
+    },
+    "P24": {
+        "prompt": "Generate a single section containing the resolution notes for the above case. Includes details about how the case was resolved or the proposed solution if the case has not been resolved.",
+        "Consecutive repeated substring score": 0.9655172413793104,
+        "Summac precision": 0.2159925286072063,
+        "Rouge score": {
+            "rouge1-precision": 0.20938969288981762,
+            "rouge2-precision": 0.0782468102215992,
+            "rouge3-precision": 0.03925678955406221,
+            "rougeL-precision": 0.16081173553681827,
+            "rougeLsum-precision": 0.16459199731332103,
+            "rouge1-recall": 0.48564182699425057,
+            "rouge2-recall": 0.19805443079335525,
+            "rouge3-recall": 0.0865803070290655,
+            "rougeL-recall": 0.3863248440301175,
+            "rougeLsum-recall": 0.39837239807131425,
+            "rouge1-f1": 0.25517667924815046,
+            "rouge2-f1": 0.09667427054106202,
+            "rouge3-f1": 0.04884400967071349,
+            "rougeL-f1": 0.19654930946444663,
+            "rougeLsum-f1": 0.20165259136075372
+        },
+        "Prompt repeat score": 1.0,
+        "Entity score": 0.9051724137931034,
+        "Entity hallucination score": 0.9913793103448276
+    }
+}
