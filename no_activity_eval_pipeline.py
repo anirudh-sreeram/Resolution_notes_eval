@@ -28,7 +28,7 @@ from custom_logits_processor import (NoRepeatNGramLogitsProcessor,)
 
 os.environ["CUDA_VISIBLE_DEVICES"] = "0"
 
-def infer(eval_file, output_file_name, prompt):
+def infer(eval_file, output_file_name, prompt, model_type="starcoder+"):
     with open(eval_file, encoding="utf-8") as f:
         eval_data = json.load(f)
     
@@ -51,38 +51,43 @@ def infer(eval_file, output_file_name, prompt):
 
         # preprocessing
         # steps = ["remove_previous_summary", "html_tags", "truncate_input"]
-        # steps = ["remove_previous_summary", "truncate_input"]
-        # steps = ["replace_previous_model_tags",
-        #         "remove_created_date",
-        #         "prompt",
-        #         "replace_instructions",
-        #         "remove_links",
-        #         "html_tags",
-        #         "remove_previous_summary",
-        #         "process_tags",
-        #         "truncate_input",]
-        steps = {"Record Resolution": [
-                "replace_previous_model_tags",
-                "remove_created_date",
-                "prompt",
-                "replace_instructions",
-                "remove_links",
-                "html_tags",
-                "remove_previous_summary",
-                "process_tags",
-                "truncate_input",
-            ]}
+        steps = ["remove_previous_summary", "truncate_input"]
         pipeline = PreProcessingPipeline()
 
         def preprocess(text):
+            # text = (
+            #     text
+            #         .replace("<|system|>", "<|system|>\n")
+            #         .replace("<|endoftext|><|customer|>", "<|end|>\n<|user|>\n")
+            #         .replace("<|endoftext|><|agent|>", "<|end|>\n<|assistant|>")
+            # )
+
             return pipeline.preprocess(text, tokenizer, steps).preprocessed_input
 
-        inputs = '<|system|>' +  preprocess(inputs) + '<|end|>\n<|user|>\n' + prompt + '<|end|>\n<|assistant|>'
+        inputs = preprocess(inputs)
+        
+        # Remove all the activities Anirudh added
+        # check if \ncomments: appears first or \nworknotes: appears first
+        # if inputs.find('comments:') < inputs.find('worknotes:'):
+        #     inputs = inputs.split('comments:')[0] #.split('\nworknotes')[0]
+        #     if inputs.find('worknotes:') != -1:
+        #         inputs = inputs.split('worknotes')[0]
+        # else:
+        #     inputs = inputs.split('work_notes')[0]
+        #     if inputs.find('comments:') != -1:
+        #         inputs = inputs.split('comments:')[0]
+            
 
-        # print(inputs)
-        # break
+        # need to add current inputs
+        if model_type  == "starcoder+":
+            inputs = '<|system|>\n' + inputs + '<|end|>\n<|user|>\n' + prompt + '<|end|>\n<|assistant|>'
+            inputs_tokenized = tokenizer(inputs, return_tensors="pt")
+        elif model_type == "lama":
+            inputs = '<s>[INST] <<SYS>>' + prompt + '</SYS<>>' + inputs +  '[/INST]'
+            inputs_tokenized = tokenizer(inputs, padding=True, return_tensors="pt")
+        
         cuda_device = 'cuda:0'
-        inputs_tokenized = tokenizer(inputs, padding=True, return_tensors="pt")
+        
 
         with torch.no_grad():
             inputs_tokenized = {k: v.to(cuda_device) for k, v in inputs_tokenized.items()}
@@ -109,7 +114,8 @@ def infer(eval_file, output_file_name, prompt):
             curr_output['target'] = record["targets_pretokenized"]
             curr_output['model output'] = single_result[0]
             curr_output['id'] = record['id']
-           # curr_output['bu'] = record['bu']
+            curr_output['bu'] = record['bu']
+            curr_output['hallucination'] = ''
             #curr_output['Eval_type'] = record['Eval_type']
             
         output_list.append(curr_output)
@@ -150,7 +156,8 @@ def add_individual_scores_to_json(json_file, summac_score, repeated_metric, prom
 if __name__ == '__main__':
     # model_id = '/mnt/atg_platform/models/other/nowllm_15.5b_v0.3_082623'
     # model_id = '/mnt/atg_platform/models/now_llm_chat/v0.3.1' # the one Anil used
-    model_id = '/mnt/atg_platform/models/now_llm_chat/v0.4.0-rc2'
+    #model_id = '/mnt/atg_platform/models/now_llm_chat/v0.4.0-rc2'
+    model_id = '/mnt/atg_platform/models/now_llm_chat/v0.4.1-rc1'
     cache = 'cache_model'
 
     # creating model
@@ -161,9 +168,9 @@ if __name__ == '__main__':
         use_cache=True,
         low_cpu_mem_usage=True,
         torch_dtype=torch.float16,
-    )
-    model_base.to("cuda")
-    tokenizer = AutoTokenizer.from_pretrained(model_id)
+        rope_scaling={"type": "dynamic", "factor": 2.0},
+    ).to("cuda")
+    tokenizer = AutoTokenizer.from_pretrained(model_id, use_fast=True)
     
     dt_now = datetime.datetime.now()
     folder_name = '{}_{}_{}'.format(dt_now.month, dt_now.day, dt_now.year)
@@ -171,17 +178,16 @@ if __name__ == '__main__':
     if not os.path.exists(path):
         os.makedirs(path)
         
-    # eval_file = 'data/filtered_bu_resolution_notes_eval.json'
-    # eval_file = 'data/test_RSv0.1.json'
-    eval_file = 'data/eval.json'
+    eval_file = 'data/filtered_bu_resolution_notes_eval.json'
+    #eval_file = 'data/test_RSv0.1.json'
     # prompt_data = json.load(open('prompts/prompts_9_15_2023.json', 'r'))
     prompt_data = json.load(open('prompts/prompts_10_10_2023_v1.json', 'r'))
     metric_data = {}
     
     start = time.time()
     for prompt_index in prompt_data:
-        output_file_name = os.path.join(path, 'inputs_{}_outputs.json'.format(prompt_index))
-        infer(eval_file, output_file_name, prompt_data[prompt_index])
+        output_file_name = os.path.join(path, 'inputs_{}_outputs_RS2.json'.format(prompt_index))
+        infer(eval_file, output_file_name, prompt_data[prompt_index],'starcoder+')
         #consecutive_repeated_substring_score, repeated_metric, summac_score, rouge_score, prompt_repeat_score, entity_score, entity_hallucination_score = get_metrics(output_file_name, prompt_data[prompt_index])
         # metric_data[prompt_index] = {
         #     'Consecutive repeated substring score': consecutive_repeated_substring_score,
